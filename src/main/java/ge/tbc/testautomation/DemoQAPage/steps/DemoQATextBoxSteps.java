@@ -2,6 +2,7 @@ package ge.tbc.testautomation.DemoQAPage.steps;
 
 import com.codeborne.selenide.Selenide;
 import ge.tbc.testautomation.DemoQAPage.pages.DemoQATextBoxPage;
+import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.CollectionCondition.texts;
 import static ge.tbc.testautomation.data.Constants.*;
@@ -9,31 +10,36 @@ import static ge.tbc.testautomation.data.Constants.*;
 public class DemoQATextBoxSteps {
     DemoQATextBoxPage demoQATextBoxPage = new DemoQATextBoxPage();
 
-    public DemoQATextBoxSteps fullNameFillInfo(){
+    @Step("filling fullname field")
+    public DemoQATextBoxSteps fullNameFillInfo() {
         demoQATextBoxPage.fullName.sendKeys(FULL_NAME);
 
         return this;
     }
 
-    public DemoQATextBoxSteps emailFillInfo(){
+    @Step("filtering email field")
+    public DemoQATextBoxSteps emailFillInfo() {
         demoQATextBoxPage.email.sendKeys(EMAIL);
 
         return this;
     }
 
-    public DemoQATextBoxSteps currentAddressFillInfo(){
+    @Step("filling current address field")
+    public DemoQATextBoxSteps currentAddressFillInfo() {
         demoQATextBoxPage.currentAddress.sendKeys(CURRENT_ADDRESS);
 
         return this;
     }
 
-    public DemoQATextBoxSteps permanentAddressFillInfo(){
+    @Step("filling permanent address field")
+    public DemoQATextBoxSteps permanentAddressFillInfo() {
         demoQATextBoxPage.permanentAddress.sendKeys(PERMANENT_ADDRESS);
 
         return this;
     }
 
-    public DemoQATextBoxSteps scrollToSubmitBtn(){
+    @Step("scroll to submit button")
+    public DemoQATextBoxSteps scrollToSubmitBtn() {
         Selenide.executeJavaScript(
                 SCROLL_TO_EL_JS, demoQATextBoxPage.submitBtn
         );
@@ -41,15 +47,17 @@ public class DemoQATextBoxSteps {
         return this;
     }
 
-    public DemoQATextBoxSteps submitForm(){
+    @Step("click on submit button")
+    public DemoQATextBoxSteps submitForm() {
         demoQATextBoxPage.submitBtn.click();
 
         return this;
     }
 
-    public void pharagraphsAssertion(){
+    @Step("assert fields")
+    public void pharagraphsAssertion() {
         demoQATextBoxPage.paragraph.shouldHave(texts(
-                "Name:" + FULL_NAME, "Email:" + EMAIL,"Current Address :" + CURRENT_ADDRESS,"Permananet Address :" + PERMANENT_ADDRESS));
+                "Name:" + FULL_NAME, "Email:" + EMAIL, "Current Address :" + CURRENT_ADDRESS, "Permananet Address :" + PERMANENT_ADDRESS));
 
     }
 }

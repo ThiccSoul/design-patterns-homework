@@ -5,7 +5,7 @@ import com.codeborne.selenide.SelenideElement;
 import static com.codeborne.selenide.Selectors.byTagAndText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$x;
-import static ge.tbc.testautomation.data.Constants.*;
+import static ge.tbc.testautomation.data.Constants.PRICINT_BTN_TXT;
 
 public class IndividualProductsPage {
     public SelenideElement

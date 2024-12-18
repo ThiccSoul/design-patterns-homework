@@ -43,12 +43,4 @@ public class OrderPage {
             lastNameField = $x("//*[@id='biLastName']");
 
 
-
-
-
-
-
-
-
-
 }

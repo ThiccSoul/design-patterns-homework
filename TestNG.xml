@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestSuite1" thread-count="2" parallel="classes">
+    <parameter name="browser" value="chrome"/>
+    <listeners>
+        <listener class-name="ge.tbc.testautomation.listeners.ReportListener"/>
+        <listener class-name="ge.tbc.testautomation.listeners.SelenideScreenshotListener"/>
+        <listener class-name="ge.tbc.testautomation.listeners.SuiteListener"/>
+        <listener class-name="ge.tbc.testautomation.listeners.TestListener"/>
+    </listeners>
+    <test name="DemoQAPageTests">
+        <groups>
+            <run>
+                <include name="NewFeatureTesting"/>
+            </run>
+        </groups>
+        <packages>
+            <package name="ge.tbc.testautomation.DemoQAPageTests"/>
+        </packages>
+    </test>
+    <test name="HerokuappTests">
+        <groups>
+            <run>
+                <include name="Regression"/>
+            </run>
+        </groups>
+        <packages>
+            <package name="ge.tbc.testautomation.HerokuappPageTests"/>
+        </packages>
+    </test>
+    <test name="TelerikPageTests">
+        <groups>
+            <run>
+                <include name="Smoke"/>
+            </run>
+        </groups>
+        <packages>
+            <package name="ge.tbc.testautomation.TelerikPageTests"/>
+        </packages>
+    </test>
+</suite>

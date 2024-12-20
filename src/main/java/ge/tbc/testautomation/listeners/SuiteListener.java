@@ -2,9 +2,11 @@ package ge.tbc.testautomation.listeners;
 
 import org.testng.ISuite;
 import org.testng.ISuiteListener;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
-public class SuiteListener implements ISuiteListener{
+
+public class SuiteListener implements ISuiteListener {
     private long suiteStartTime;
 
     @Override

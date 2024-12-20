@@ -1,10 +1,8 @@
 package ge.tbc.testautomation.listeners;
-import org.testng.IReporter;
-import org.testng.ISuite;
-import org.testng.ISuiteResult;
-import org.testng.ITestContext;
-import org.testng.ITestResult;
+
+import org.testng.*;
 import org.testng.xml.XmlSuite;
+
 import java.util.List;
 import java.util.Set;
 

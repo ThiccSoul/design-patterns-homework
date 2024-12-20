@@ -6,7 +6,7 @@ import com.codeborne.selenide.SelenideElement;
 import static com.codeborne.selenide.Selectors.byAttribute;
 import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
-import static ge.tbc.testautomation.data.Constants.*;
+import static ge.tbc.testautomation.data.Constants.MICROSOFT_TITLE;
 
 public class DemosPage {
     public SelenideElement
